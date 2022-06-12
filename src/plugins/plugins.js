@@ -83,7 +83,9 @@ define([
     './gauge/GaugePlugin',
     './timelist/plugin',
     './faultManagement/FaultManagementPlugin',
-    '../../example/exampleTags/plugin'
+    '../../example/exampleTags/plugin',
+    './dsn/src/plugin'
+
 ], function (
     _,
     UTCTimeSystem,
@@ -147,7 +149,8 @@ define([
     GaugePlugin,
     TimeList,
     FaultManagementPlugin,
-    ExampleTags
+    ExampleTags,
+    DsnPlugin
 ) {
     const plugins = {};
 
@@ -232,6 +235,7 @@ define([
     plugins.OperatorStatus = OperatorStatus.default;
     plugins.Gauge = GaugePlugin.default;
     plugins.Timelist = TimeList.default;
+    plugins.DsnPlugin = DsnPlugin.default;
 
     return plugins;
 });
